@@ -29,11 +29,11 @@
             <% } %>
         </div>
         <div class = "right container">
-            <div class = "btn-container">
+            <!-- <div class = "btn-container">
                 <form class="d-flex-2" action="/submit" method="GET">
-                    <button class="btn btn-outline-success" type="submit">Random Recipe</button>
+                    <button class="btn btn-outline-success" type="submit">Random Drink</button>
                 </form>
-            </div>
+            </div> -->
             <% if(locals.cocktail && locals.type && locals.glassType && locals.recipe && locals.instruction) { %>
                 <h2><%= cocktail %></h2>
                 <p class = "p"><span>Type : </span>  <%= type %></p>
@@ -52,6 +52,11 @@
             <% if (locals.errorMessage) { %>
                 <h2 class="error"><%= errorMessage %></h2>
             <% } %>
+        </div>
+        <div class = "btn-container">
+            <form class = "d-flex-2" action="/submit" method="GET">
+                <button class="btn button-2 btn-outline-success" type="submit">Random Drink</button>
+            </form>
         </div>
     </div>
     <%- include("footer.ejs") %>
